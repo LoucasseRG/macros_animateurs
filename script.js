@@ -19,8 +19,8 @@ var emplacement = '<a type="button" class="button primary boutonMessage" title="
 var titre = '<a type="button" class="button primary boutonMessage" title="Titre non explicite" data-msg="Salut ' +  author + ', :membre:<br><br>J\'ai [B]édité[/B] [FA]fa-pencil-square-o[/FA]le titre de ta discussion pour que celle-ci soit plus [B]compréhensible[/B].<br><br>A l\'avenir essaie de faire des titres plus [B]longs[/B] et [B]détaillés[/B], plus le titre est long et détaillé, plus tu obtiendras de [B]vues[/B] [FA]fa-eye[/FA]  ainsi que des [B]réponses[/B] [FA]fa-comments-o[/FA].:bye:"><i class="fa fa-text-width" aria-hidden="true"></i> Titre</a>';
 var resolu = '<a type="button" class="button primary boutonMessage" title="Signaler que le topic est résolu" data-msg="Salut ' + author + ',<br><br>Je déplace ton topic en [color=rgb(0, 179, 0)][b]résolu[/b] [fa]fa-check-circle[/fa][/color]!<br><br>' + signature + '"><i class="fa fa-check-circle" aria-hidden="true"></i> Résolu</a>';
 var ask_resolu = '<a type="button" class="button primary boutonMessage" title="Demander si le topic est résolu" data-msg="Salut ' + author + ',<br><br>[color=#00b300][fa]fa-check[/fa][/color] Ton topic est résolu ?<br>[color=#00b300][fa]fa-thumbs-o-up[/fa][/color] Clique sur \'[b][color=#00b300]Cette réponse a résolu mon topic[/color][/b]\' si quelqu\'un a su t\'aider, pour le remercier et pouvoir déplacer ton topic dans la section adéquate.<br><br>[color=#ff0000][fa]fa-bell-o[/fa]Si tu as trouvé la solution tout seul, tu peux la poster[/color].;)<br><br>' + signature + '"><i class="fa fa-check-circle" aria-hidden="true"></i> Résolu ?</a>';
-
-$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + emplacement + titre + resolu + ask_resolu + '');
+    
+$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + conditions + bienvenue + helper + contenu +'');
   
     $(document).ready(function() {
     $('.boutonMessage').click(function() {
@@ -28,4 +28,5 @@ $('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + emplacem
     $('iframe.redactor_textCtrl').contents().find('body').select();
     $('iframe.redactor_textCtrl').contents().find('body').focus();
     });
+});
 });
