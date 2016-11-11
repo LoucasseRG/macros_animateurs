@@ -21,7 +21,7 @@ var resolu = '<a type="button" class="button primary boutonMessage" title="Signa
 var ask_resolu = '<a type="button" class="button primary boutonMessage" title="Demander si le topic est résolu" data-msg="Salut ' + author + ',<br><br>[color=#00b300][fa]fa-check[/fa][/color] Ton topic est résolu ?<br>[color=#00b300][fa]fa-thumbs-o-up[/fa][/color] Clique sur \'[b][color=#00b300]Cette réponse a résolu mon topic[/color][/b]\' si quelqu\'un a su t\'aider, pour le remercier et pouvoir déplacer ton topic dans la section adéquate.<br><br>[color=#ff0000][fa]fa-bell-o[/fa]Si tu as trouvé la solution tout seul, tu peux la poster[/color].;)<br><br>' + signature + '"><i class="fa fa-check-circle" aria-hidden="true"></i> Résolu ?</a>';
 var doublon = '<a type="button" class="button primary boutonMessage" title="Topic en doublon" data-msg="Salut ' + author + ',<br><br>Une discussion très similaire [FA]fa-exchange[/FA]  existe déjà sur le forum.<br>Je déplace donc celle-ci pour cause de doublon [FA]fa-files-o[/FA].<br><br>' + signature + '"><i class="fa fa-comments-o" aria-hidden="true"></i> Doublon</a>';
     
-$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + emplacement + titre + resolu + ask_resolu + '');
+$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + emplacement + titre + resolu + ask_resolu + doublon + '');
   
     $(document).ready(function() {
     $('.boutonMessage').click(function() {
