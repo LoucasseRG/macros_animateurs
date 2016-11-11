@@ -20,7 +20,7 @@ var titre = '<a type="button" class="button primary boutonMessage" title="Titre 
 var resolu = '<a type="button" class="button primary boutonMessage" title="Signaler que le topic est résolu" data-msg="Salut ' + author + ',<br><br>Je déplace ton topic en [color=rgb(0, 179, 0)][b]résolu[/b] [fa]fa-check-circle[/fa][/color]!<br><br>' + signature + '"><i class="fa fa-check-circle" aria-hidden="true"></i> Résolu</a>';
 var ask_resolu = '<a type="button" class="button primary boutonMessage" title="Demander si le topic est résolu" data-msg="Salut ' + author + ',<br><br>[color=#00b300][fa]fa-check[/fa][/color] Ton topic est résolu ?<br>[color=#00b300][fa]fa-thumbs-o-up[/fa][/color] Clique sur \'[b][color=#00b300]Cette réponse a résolu mon topic[/color][/b]\' si quelqu\'un a su t\'aider, pour le remercier et pouvoir déplacer ton topic dans la section adéquate.<br><br>[color=#ff0000][fa]fa-bell-o[/fa]Si tu as trouvé la solution tout seul, tu peux la poster[/color].;)<br><br>' + signature + '"><i class="fa fa-check-circle" aria-hidden="true"></i> Résolu ?</a>';
     
-$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + conditions + bienvenue + helper + contenu +'');
+$('#QuickReply').find('.submitUnit').children('input').eq(1).after('' + emplacement + titre + resolu + ask_resolu + '');
   
     $(document).ready(function() {
     $('.boutonMessage').click(function() {
